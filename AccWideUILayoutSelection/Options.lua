@@ -60,7 +60,8 @@ function AccWideUIAceAddon:GenerateDefaultDB()
 				chatWindowPosition = true,
 				chatChannels = true,
 				systemGraphics = false,
-				systemAudio = false
+				systemAudio = false,
+				systemModifierKeys = false
 			},
 			syncData = {
 				editModeLayoutID = "unset",
@@ -172,6 +173,9 @@ function AccWideUIAceAddon:GenerateDefaultDB()
 				},
 				systemAudio = {
 					cvars = {}
+				},
+				systemModifierKeys = {
+					special = {}
 				},
 				chat = {
 					windows = {
@@ -620,6 +624,13 @@ function AccWideUIAceAddon:GenerateOptions()
 										width = thisCheckboxWidth,
 										desc = L["ACCWUI_OPT_MODULES_CHK_SYSAUDIO_DESC"],
 									},
+									systemModifierKeys = {
+										type = "toggle",
+										name = L["ACCWUI_OPT_MODULES_CHK_SYSMODKEYS"],
+										order = 12,
+										width = thisCheckboxWidth,
+										desc = L["ACCWUI_OPT_MODULES_CHK_SYSMODKEYS_DESC"],
+									},
 								}
 							},
 							experimentalSyncToggles = {
@@ -630,7 +641,6 @@ function AccWideUIAceAddon:GenerateOptions()
 								hidden = "ShouldExperimentalSyncsListBeHidden",
 								get = "GetSyncToggle",
 								set = "SetSyncToggle",
-								hidden = (not self:IsMainline()),
 								args = {
 									desc = {
 										type = "description",
@@ -1350,5 +1360,9 @@ function AccWideUIAceAddon:ShouldCustomCVarListBeHidden()
 end
 
 function AccWideUIAceAddon:ShouldExperimentalSyncsListBeHidden()
-	return not self.db.global.allowExperimentalSyncs
+	if self:IsMainline() then
+		return not self.db.global.allowExperimentalSyncs
+	else
+		return true
+	end
 end

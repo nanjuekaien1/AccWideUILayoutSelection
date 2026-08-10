@@ -1,7 +1,6 @@
 - (Retail) Renamed "Auto Loot Settings" to "Auto Loot Rate Setting", as the [Auto Loot CVar is now Account Wide as of 12.1.0](https://worldofwarcraft.blizzard.com/en-us/news/24288418#:~:text=User%20Interface%20Improvements).
   - This change doesn't affect Classic, and AWI will still sync the Auto Loot CVar as before.
 - (Retail) Added 12.1.0 CVars.
-- Loading a profile that synchronises an Edit Mode layout should no longer cause any custom CD bars created with [Cooldown Manager Centered](https://www.curseforge.com/wow/addons/cooldown-manager-centered) to be permanently visible when it shouldn't, despite its visiblity settings.
-- Exporting a profile string no longer includes any saved Graphics or Audio Settings.
-  - These can still be exported/imported seperately with the relevant buttons in the Advanced Settings tab.
-- Feature detection refactor for future updates.
+- Interrupting the loading of settings by entering combat will now not re-reload most CVars after exiting combat. This should prevent any potential hitching etc when chain pulling during the loading of settings.
+- Added syncing of Modifier Keybinds (such as the Auto Loot and Self Cast modifier keys) to the addon.
+	- This is disabled by default and can be enabled under the 'System' section of the profile settings.
