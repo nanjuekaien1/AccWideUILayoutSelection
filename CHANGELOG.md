@@ -1,3 +1,6 @@
+- (Retail) Renamed "Auto Loot Settings" to "Auto Loot Rate Setting", as the [Auto Loot CVar is now Account Wide as of 12.1.0](https://worldofwarcraft.blizzard.com/en-us/news/24288418#:~:text=User%20Interface%20Improvements).
+  - This change doesn't affect Classic, and AWI will still sync the Auto Loot CVar as before.
+- (Retail) Added 12.1.0 CVars.
 - Interrupting the loading of settings by entering combat will now not re-reload most CVars after exiting combat. 
 	- This should prevent any potential hitching etc when chain pulling in an old instance immediately after logging in to a character.
 - Added syncing of Modifier Keybinds (such as the Auto Loot and Self Cast modifier keys) to the addon.

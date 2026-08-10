@@ -48,6 +48,7 @@ The addon can synchronise the following, and you can disable any that you'd rath
 * System
 	* Graphics Settings
 	* Audio Settings
+	* Modifier Keybinds
 * Experimental (Togglable in Advanced Options)
 	* Bag Organisation Settings
 
@@ -61,7 +62,7 @@ The addon can synchronise the following, and you can disable any that you'd rath
 * Custom CVar Support - Enter your own additional list of CVars to synchronise across characters, enable in Advanced Settings
 
 ## Compatibility
-* **Midnight** - 12.0.7
+* **Midnight** - 12.1.0
 * **MoP Classic** - 5.5.4
 * **TBC Classic** - 2.5.6
 * **Classic Era** - 1.15.9
