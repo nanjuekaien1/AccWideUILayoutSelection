@@ -787,7 +787,8 @@ AccWideUIAceAddon.CVars = {
 		"GUILD_ITEM_LOOTED",
 		"COMMUNITIES_CHANNEL",
 		"VOICE_TEXT",
-		"PING"
+		"PING",
+		"GUILD_DISCORD"
 	}
 	
 }
